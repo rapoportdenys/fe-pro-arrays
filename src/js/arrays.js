@@ -5,9 +5,11 @@
  Помните, что вы передаете функцию, которая ожидает 3 аргумента, текущий элемент, индекс и сам массив. Автоматическая проверка будет это учитывать.
 */
 function forEach(array, callback) {
+  let result;
   for (let i = 0; i < array.length; i++) {
-      callback(i, array[i], array);
+      result = callback(i, array[i], array);
   };
+  return result
 };
 /* Функция принимает в себе первым аргументом массив, вторым функцию которая будет вызываться для каждого элемента массива
  вот документация https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
